@@ -23,7 +23,7 @@
     h = int(float(input('Please enter the height: ')))
     api = input('Please enter the TinyPNG API Key: ')
     method = input('Please enter the resizing method: \n1.scale\t2.fit\t3.cover\t4.thumb ')
-    resize.resize(api, src, dst, w, h, method)
+    resize.resize(api, src, dst, w, h, resize.METHODS[method-1])
   ```
   * You can use this main code to compress an image:
   
@@ -33,6 +33,6 @@
     src = input('Please enter the source directory: ')
     dst = input('Please enter the destination directory: ')
     api = input('Please enter the TinyPNG API Key: ')
-    level = int(float(input('Please enter the Level of compression: ')))
+    level = int(float(input('Please enter the level of compression: ')))
     resize.tiny(api, src, dst, level)
   ```
